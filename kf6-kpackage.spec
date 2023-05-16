@@ -28,6 +28,7 @@ BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6QuickTest)
 BuildRequires: cmake(KF6Archive)
 BuildRequires: cmake(KF6I18n)
+BuildRequires: cmake(KF6CoreAddons)
 Requires: %{libname} = %{EVRD}
 
 %description
