@@ -1,6 +1,6 @@
 %define libname %mklibname KF6Package
 %define devname %mklibname KF6Package -d
-%define git 20231011
+%define git 20231014
 
 Name: kf6-kpackage
 Version: 5.240.0
