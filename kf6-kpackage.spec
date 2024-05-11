@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-kpackage
-Version: 6.1.0
+Version: 6.2.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kpackage/-/archive/master/kpackage-master.tar.bz2#/kpackage-%{git}.tar.bz2
