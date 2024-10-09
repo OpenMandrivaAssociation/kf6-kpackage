@@ -7,7 +7,7 @@
 
 Name: kf6-kpackage
 Version: 6.6.0
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kpackage/-/archive/master/kpackage-master.tar.bz2#/kpackage-%{git}.tar.bz2
 %else
