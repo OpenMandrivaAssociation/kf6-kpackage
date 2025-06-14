@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-kpackage
-Version: 6.14.0
+Version: 6.15.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kpackage/-/archive/master/kpackage-master.tar.bz2#/kpackage-%{git}.tar.bz2
@@ -85,7 +85,6 @@ Installation and loading of additional content (ex: scripts, images...)
 %files -n %{devname}
 %{_includedir}/KF6/KPackage
 %{_libdir}/cmake/KF6Package
-%{_qtdir}/doc/KF6Package.*
 
 %files -n %{libname}
 %{_libdir}/libKF6Package.so*
