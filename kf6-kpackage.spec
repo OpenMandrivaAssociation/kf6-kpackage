@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-kpackage
-Version: 6.27.0
+Version: 6.28.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kpackage/-/archive/master/kpackage-master.tar.bz2#/kpackage-%{git}.tar.bz2
@@ -62,7 +62,7 @@ Development files (Headers etc.) for %{name}.
 Installation and loading of additional content (ex: scripts, images...)
 
 %prep
-%autosetup -p1 -n kpackage-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n kpackage-6.28.0
 %cmake \
 	-DBUILD_QCH:BOOL=ON \
 	-DBUILD_WITH_QT6:BOOL=ON \
