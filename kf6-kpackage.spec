@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-kpackage
-Version: 6.28.0
+Version: 6.29.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kpackage/-/archive/master/kpackage-master.tar.bz2#/kpackage-%{git}.tar.bz2
@@ -39,6 +39,8 @@ BuildRequires: cmake(KF6I18n)
 BuildRequires: cmake(KF6CoreAddons)
 BuildRequires: cmake(KF6DocTools)
 Requires: %{libname} = %{EVRD}
+BuildSystem:	cmake
+BuildOption:	-DBUILD_QCH:BOOL=ON
 
 %description
 Installation and loading of additional content (ex: scripts, images...)
@@ -60,22 +62,6 @@ Requires: %{libname} = %{EVRD}
 Development files (Headers etc.) for %{name}.
 
 Installation and loading of additional content (ex: scripts, images...)
-
-%prep
-%autosetup -p1 -n kpackage-6.28.0
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_WITH_QT6:BOOL=ON \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang %{name} --all-name --with-qt --with-html --with-man
 
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/kpackage.*
